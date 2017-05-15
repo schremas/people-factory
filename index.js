@@ -16,16 +16,31 @@ const handleSubmit = (ev) => {
     const colorDiv = `
         <div style="height: 50px; wodth: 100px; background-color: ${hairColor}"></div>
     `
+    const ul = document.createElement('ul')
+    const name = document.createElement('li')
+    const color = document.createElement('li')
+    const yrs = document.createElement('li')
+    const birth = document.createElement('li')
+        
+    name.innerHTML = `Name: ${personName}`
+    color.innerHTML = `Hair Color: ${hairColor}`
+    yrs.innerHTML = `Age: ${age}`
+    birth.innerHTML = `Birthplace: ${birthplace}`
 
-    details.innerHTML = `
-        <ul>
-            <li>Name: ${personName}</li>
-            <li>Hair Color: ${hairColor}</li>
-            <li>Age: ${age}</li>
-            <li>Birthplace: ${birthplace}</li>
-        </ul>
-    `
-    
+    details.appendChild(ul)
+    ul.appendChild(name)
+    ul.appendChild(color)
+    ul.appendChild(yrs)
+    ul.appendChild(birth)
+
+   //  details.innerHTML = `
+   //     <ul>
+   //         <li>Name: ${personName}</li>
+   //         <li>Hair Color: ${hairColor}</li>
+   //         <li>Age: ${age}</li>
+   //         <li>Birthplace: ${birthplace}</li>
+   //     </ul>
+   `
 }
 
 personForm.addEventListener('submit', handleSubmit)

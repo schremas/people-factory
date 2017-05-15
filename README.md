@@ -3,7 +3,7 @@
 ## Homework
 
 Add form values to `.details` using `document.createElement`
-and `appendChild`, instead of inerHTML`
+and `appendChild`, instead of innerHTML`
 
 ### Bonus Credit
 
